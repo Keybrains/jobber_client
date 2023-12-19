@@ -56,7 +56,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import Client from '../client/Client';
 import ClientDashboard from '../client/ClientDashboard';
 
-// properties
+// propertiesss
 import NewProperties from '../properties/NewProperties';
 import Properties from '../properties/Properties';
 
