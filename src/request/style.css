@@ -1,0 +1,17 @@
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+.toggle.ios .toggle-handle { border-radius: 20rem; }
+
+.heading-form{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.container-form-inputs{
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.inputs{
+    margin-right: 30px;
+}

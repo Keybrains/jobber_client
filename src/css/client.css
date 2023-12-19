@@ -1,0 +1,17 @@
+.container-form{
+    width: 70%;
+    align-items: flex-start;
+    max-width: 800px;
+}
+
+.heading-form{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.container-form-inputs{
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin-top: 30px;
+}
