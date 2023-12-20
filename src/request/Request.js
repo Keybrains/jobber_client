@@ -14,11 +14,13 @@ import {
 import toast from "react-hot-toast";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import RequestDashboard from "./RequestDashboard";
 
 function Request() {
   const history = useHistory();
   const [clientData, setClientData] = useState({});
   const [selectedProperty, setSelectedProperty] = useState(null);
+
   const [userData, setUserData] = useState({
     id: {
       user_id: "",
@@ -123,6 +125,7 @@ function Request() {
       fetchData();
     }
   }, [userData.id?.client_id]);
+
   const handlePropertySelection = (property) => {
     setSelectedProperty(property);
 
@@ -131,7 +134,6 @@ function Request() {
     );
 
     if (selectedIndex !== -1) {
-
       const selectedPropertyId = clientData.data[selectedIndex].property_id;
 
       setData((prevData) => ({
@@ -145,15 +147,6 @@ function Request() {
     <div className="p-4 d-flex justify-content-center align-items-center">
       <div className="container-form mt-4">
         <p className="heading-form text-dark mx-2">New request</p>
-        {/* <Button
-         
-          variant="success"
-          size="sm"
-          style={{ maxHeight: 40 }}
-          className="ms-auto"
-        >
-                +
-        </Button> */}
         <div className="container-form-inputs">
           <NewRequestForm
             handleSubmit={handleSubmit}

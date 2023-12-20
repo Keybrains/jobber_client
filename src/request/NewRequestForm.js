@@ -33,16 +33,15 @@ function NewRequestForm({
   selectedProperty,
 }) {
   const history = useHistory();
-console.log(clientData,"clienttttttttttttData")
+  console.log(clientData, "clienttttttttttttData");
   return (
     <div>
       <Form onSubmit={handleSubmit} className="mt-4 p-2">
         <Row>
           <Col className="mb-4">
             <Form.Label style={{ fontSize: "30px" }}>Address</Form.Label>
-            
-            {clientData &&
-              clientData.data &&
+
+            {clientData && clientData.data && clientData.data.length > 0 ? (
               clientData.data.map((property) => (
                 <div key={property._id}>
                   <InputGroup>
@@ -54,7 +53,10 @@ console.log(clientData,"clienttttttttttttData")
                     />
                   </InputGroup>
                 </div>
-              ))}
+              ))
+            ) : (
+              <div>No address found</div>
+            )}
           </Col>
         </Row>
         <Row className="mb-1">
